@@ -15,13 +15,13 @@ class State(rx.State):
 def index() -> rx.Component:
     return rx.center(
         rx.theme_panel(),
-        rx.vstack(
-            rx.heading("Welcome to Reflex!", size="9"),
-            rx.text("Get started by editing ", rx.code(filename)),
-            rx.button(
+        rx.chakra.vstack(
+            rx.chakra.heading("Welcome to Reflex!", size="sm"),
+            rx.chakra.text("Get started by editing ", rx.chakra.code(filename)),
+            rx.chakra.button(
                 "Check out our docs!",
                 on_click=lambda: rx.redirect(docs_url),
-                size="4",
+                size="sm",
             ),
             rx.logo(),
             align="center",
