@@ -2,3 +2,6 @@
 *.py[cod]
 .web
 __pycache__/
+
+.DS_Store
+Algorithm-Test
