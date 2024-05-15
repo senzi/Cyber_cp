@@ -1,3 +1,14 @@
+---
+title: Cyber CP Demo Application
+emoji: 🤖
+colorFrom: "#ff00ff" # 紫色
+colorTo: "#00ffff" # 青色
+sdk: Gradio
+sdk_version: 4.31.1
+app_file: app.py
+pinned: false
+---
+
 # Cyber CP Demo 应用
 这是一个使用Gradio库创建的简单应用，用于计算两个名字的CP值（兼容性得分）和生成基于名字性格特点的故事提示。
 
