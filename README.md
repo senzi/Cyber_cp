@@ -1,94 +1,36 @@
-# Reflex 应用快速入门
+# Cyber CP Demo 应用
+这是一个使用Gradio库创建的简单应用，用于计算两个名字的CP值（兼容性得分）和生成基于名字性格特点的故事提示。
 
-本文档概述了创建一个基本Reflex应用的步骤。
+## 项目依赖
+本项目依赖于`gradio`和`hashlib`库。项目依赖项已在`requirements.txt`文件中列出。安装依赖项的步骤如下：
 
-环境准备
----
+1. 确保已经安装了Python环境。
+2. 克隆本项目到本地，或者下载并解压项目压缩包。
+3. 在项目根目录下，运行以下命令来安装依赖项：
+   ```
+   pip install -r requirements.txt
+   ```
 
-确保你已经安装了Python环境以及Reflex框架。如果没有安装Reflex框架，可以通过以下命令进行安装：
+## 启动应用
+要启动应用，请在项目根目录下执行以下命令：
 
-```bash
-pip install reflex
+```
+python app.py
 ```
 
-创建应用
+这将启动一个本地服务器，通常你可以在浏览器中通过访问 `http://localhost:7860` 来查看应用界面。
+
+## 使用说明
+1. 在应用界面中，输入两个名字（A和B）。
+2. 点击“计算cp值”按钮，将计算并显示两个名字的哈希值和CP值。
+3. 点击“生成故事Prompt”按钮，将根据两个名字生成一个故事提示。
+4. 复制生成的故事提示，并可以将其交给Kimi生成故事。
+
+## 注意事项
+- 确保在运行应用之前已经安装了所有必需的依赖项。
+- 如果在运行过程中遇到任何问题，请检查Python环境和依赖项是否正确安装。
+
 ---
 
-创建一个新的Python文件，例如 `app.py`。
-
-使用以下代码作为应用的基础框架。
-
-```python
-from rxconfig import config
-import reflex as rx
-
-docs_url = "https://reflex.dev/docs/getting-started/introduction/"
-filename = f"{config.app_name}/{config.app_name}.py"
-
-class State(rx.State):
-    """应用的状态类。"""
-
-def index() -> rx.Component:
-    return rx.center(
-        rx.theme_panel(),
-        rx.chakra.vstack(
-            rx.chakra.heading("欢迎使用 Reflex!", size="sm"),
-            rx.chakra.text("通过编辑 ", rx.chakra.code(filename)),
-            rx.chakra.button(
-                "查看我们的文档!",
-                on_click=lambda: rx.redirect(docs_url),
-                size="sm",
-            ),
-            rx.logo(),
-            align="center",
-            spacing="7",
-            font_size="2em",
-        ),
-        height="100vh",
-    )
-
-app = rx.App()
-app.add_page(index)
-```
-
-运行应用
----
-
-在命令行中，运行以下命令启动应用：
-
-```bash
-reflex run
-```
-
-应用结构
----
-
-State 类用于管理应用的状态。
-
-index 函数返回应用的主界面，包括一个欢迎标题、一个指向编辑文件的链接、一个按钮用于跳转到Reflex的文档，以及Reflex的Logo。
-
-功能说明
----
-
-用户点击“查看我们的文档!”按钮时，将会跳转到Reflex的官方文档页面。
-
-注意事项
----
-
-确保 `config.app_name` 已经正确设置为你的应用名称。
-
-如果遇到网络问题导致文档链接无法打开，请检查网络连接或链接的有效性。
-
-```bash
-# 例如，如果你想改变前端端口，可以通过以下方式运行应用：
-FRONTEND_PORT=3001 reflex run
-```
-
-或者，通过命令行参数来指定：
-
-```bash
-reflex run --frontend-port 3001
-```
-
-确保 `rxconfig.py` 文件已经正确设置，并且所有必要的环境变量和配置参数都已经被考虑进去。
+希望您喜欢使用Cyber CP Demo应用！
 ```
