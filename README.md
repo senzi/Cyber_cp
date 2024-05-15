@@ -3,7 +3,7 @@ title: Cyber CP Demo Application
 emoji: 🤖
 colorFrom: blue
 colorTo: yellow
-sdk: Gradio
+sdk: gradio
 sdk_version: 4.31.1
 app_file: app.py
 pinned: false
