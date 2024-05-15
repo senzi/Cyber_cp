@@ -1,8 +1,8 @@
 ---
 title: Cyber CP Demo Application
 emoji: 🤖
-colorFrom: "#ff00ff" # 紫色
-colorTo: "#00ffff" # 青色
+colorFrom: blue
+colorTo: yellow
 sdk: Gradio
 sdk_version: 4.31.1
 app_file: app.py
