@@ -1,6 +1,0 @@
-*.db
-*.py[cod]
-.DS_Store
-.web
-Algorithm-Test
-__pycache__/
